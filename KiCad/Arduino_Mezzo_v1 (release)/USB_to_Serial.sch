@@ -1,0 +1,341 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Interface_USB:FT230XQ U2
+U 1 1 5EB251BD
+P 5700 3500
+F 0 "U2" H 6200 2900 50  0000 C CNN
+F 1 "FT230XQ" H 6200 2800 50  0000 C CNN
+F 2 "Housings_DFN_QFN:QFN-16-1EP_4x4mm_Pitch0.65mm" H 6450 2700 28  0000 C CNN
+F 3 "https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT230X.pdf" H 5700 3500 50  0001 C CNN
+	1    5700 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_B_Mini J5
+U 1 1 5EB25BEE
+P 2300 3400
+F 0 "J5" H 2357 3867 50  0000 C CNN
+F 1 "USB_B_Mini" H 2357 3776 50  0000 C CNN
+F 2 "Custom_Library:Conn_USB_Mini-B_TH" V 2000 3400 28  0000 C CNN
+F 3 "54-00019" H 2450 3350 50  0001 C CNN
+	1    2300 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 3400 2700 3500
+Wire Wire Line
+	2600 3500 2700 3400
+Text HLabel 7050 3100 2    50   Output ~ 0
+TXD
+Wire Wire Line
+	7050 3100 6400 3100
+Text HLabel 7050 3200 2    50   Input ~ 0
+RXD
+Wire Wire Line
+	7050 3200 6400 3200
+Text HLabel 2600 3200 2    50   Output ~ 0
+VBUS
+$Comp
+L Device:LED D3
+U 1 1 5EB7EBA3
+P 7550 3700
+F 0 "D3" H 7543 3959 50  0000 C CNN
+F 1 "TX" H 7543 3868 50  0000 C CNN
+F 2 "LEDs:LED_0402" H 7543 3801 20  0000 C CNN
+F 3 "~" H 7550 3700 50  0001 C CNN
+	1    7550 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 3700 6400 3700
+$Comp
+L Device:LED D4
+U 1 1 5EB7F53F
+P 7550 4150
+F 0 "D4" H 7543 4409 50  0000 C CNN
+F 1 "RX" H 7543 4318 50  0000 C CNN
+F 2 "LEDs:LED_0402" H 7543 4251 20  0000 C CNN
+F 3 "~" H 7550 4150 50  0001 C CNN
+	1    7550 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 4150 7150 4150
+Wire Wire Line
+	7150 4150 7150 3800
+Wire Wire Line
+	7150 3800 6400 3800
+$Comp
+L Device:R_Pack04_Split RN2
+U 4 1 5EB808B1
+P 8250 3700
+F 0 "RN2" V 8001 3700 50  0000 C CNN
+F 1 "1k" V 8092 3700 50  0000 C CNN
+F 2 "Resistors_SMD:R_Array_Convex_4x0402" V 8159 3700 20  0000 C CNN
+F 3 "~" H 8250 3700 50  0001 C CNN
+	4    8250 3700
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:R_Pack04_Split RN2
+U 3 1 5EB81188
+P 8250 4150
+F 0 "RN2" V 8001 4150 50  0000 C CNN
+F 1 "1k" V 8092 4150 50  0000 C CNN
+F 2 "Resistors_SMD:R_Array_Convex_4x0402" V 8159 4150 20  0000 C CNN
+F 3 "~" H 8250 4150 50  0001 C CNN
+	3    8250 4150
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	7700 3700 8100 3700
+Wire Wire Line
+	7700 4150 8100 4150
+$Comp
+L power:GND #PWR0122
+U 1 1 5EB81B70
+P 5700 4400
+F 0 "#PWR0122" H 5700 4150 50  0001 C CNN
+F 1 "GND" H 5705 4227 50  0000 C CNN
+F 2 "" H 5700 4400 50  0001 C CNN
+F 3 "" H 5700 4400 50  0001 C CNN
+	1    5700 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 4200 5600 4300
+Wire Wire Line
+	5600 4300 5700 4300
+Wire Wire Line
+	5800 4300 5800 4200
+Wire Wire Line
+	5700 4300 5700 4200
+Connection ~ 5700 4300
+Wire Wire Line
+	5700 4300 5800 4300
+Wire Wire Line
+	5700 4400 5700 4300
+$Comp
+L power:+5V #PWR0123
+U 1 1 5EB829A0
+P 5600 2500
+F 0 "#PWR0123" H 5600 2350 50  0001 C CNN
+F 1 "+5V" H 5615 2673 50  0000 C CNN
+F 2 "" H 5600 2500 50  0001 C CNN
+F 3 "" H 5600 2500 50  0001 C CNN
+	1    5600 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 2500 5600 2800
+Wire Wire Line
+	5800 2800 5800 2700
+Wire Wire Line
+	5800 2700 4850 2700
+Wire Wire Line
+	4850 2700 4850 3100
+Wire Wire Line
+	4850 3700 5000 3700
+Wire Wire Line
+	5000 3100 4850 3100
+Connection ~ 4850 3100
+Wire Wire Line
+	4850 3100 4850 3700
+$Comp
+L Device:R_Pack04_Split RN3
+U 1 1 5EB84060
+P 4200 3400
+F 0 "RN3" V 3951 3400 50  0000 C CNN
+F 1 "22" V 4042 3400 50  0000 C CNN
+F 2 "Resistors_SMD:R_Array_Convex_4x0402" V 4109 3400 20  0000 C CNN
+F 3 "~" H 4200 3400 50  0001 C CNN
+	1    4200 3400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Pack04_Split RN3
+U 4 1 5EB84854
+P 4200 3750
+F 0 "RN3" V 3951 3750 50  0000 C CNN
+F 1 "22" V 4042 3750 50  0000 C CNN
+F 2 "Resistors_SMD:R_Array_Convex_4x0402" V 4109 3750 20  0000 C CNN
+F 3 "~" H 4200 3750 50  0001 C CNN
+	4    4200 3750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4350 3400 5000 3400
+Wire Wire Line
+	5000 3500 4500 3500
+Wire Wire Line
+	4500 3500 4500 3750
+Wire Wire Line
+	4500 3750 4350 3750
+Wire Wire Line
+	4050 3750 3800 3750
+Wire Wire Line
+	3800 3750 3800 3500
+Wire Wire Line
+	2700 3400 2950 3400
+Wire Wire Line
+	3800 3950 3800 3750
+Wire Wire Line
+	3800 3500 2700 3500
+Wire Wire Line
+	3000 3950 2950 3950
+Wire Wire Line
+	2950 3950 2950 3400
+Connection ~ 2950 3400
+Wire Wire Line
+	2950 3400 4050 3400
+Text Label 3250 3400 0    50   ~ 0
+D-
+Text Label 3200 3500 0    50   ~ 0
+D+
+Text Label 4600 3500 0    50   ~ 0
+RD+
+Text Label 4650 3400 0    50   ~ 0
+RD-
+$Comp
+L power:GND #PWR0124
+U 1 1 5EB8B7AE
+P 3350 4600
+F 0 "#PWR0124" H 3350 4350 50  0001 C CNN
+F 1 "GND" H 3355 4427 50  0000 C CNN
+F 2 "" H 3350 4600 50  0001 C CNN
+F 3 "" H 3350 4600 50  0001 C CNN
+	1    3350 4600
+	1    0    0    -1  
+$EndComp
+Connection ~ 3800 3750
+Wire Wire Line
+	3700 3950 3800 3950
+$Comp
+L Device:Ferrite_Bead L1
+U 1 1 5EB8A993
+P 3350 4450
+F 0 "L1" H 3487 4517 50  0000 L CNN
+F 1 "BLM21" H 3487 4426 50  0000 L CNN
+F 2 "Resistors_SMD:R_0402_NoSilk" H 3487 4359 20  0000 L CNN
+F 3 "MPZ1005S121CT000" H 3350 4450 50  0001 C CNN
+	1    3350 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 2700 8550 2700
+Wire Wire Line
+	8550 2700 8550 3700
+Wire Wire Line
+	8550 4150 8400 4150
+Connection ~ 5800 2700
+Wire Wire Line
+	8400 3700 8550 3700
+Connection ~ 8550 3700
+Wire Wire Line
+	8550 3700 8550 4150
+Text HLabel 6400 3600 2    50   3State ~ 0
+CBUS0
+Text HLabel 6400 3900 2    50   3State ~ 0
+CBUS3
+Text HLabel 6400 3300 2    50   Output ~ 0
+~RTS
+Text HLabel 6400 3400 2    50   Input ~ 0
+~CTS
+$Comp
+L Device:D_TVS D2
+U 1 1 5EBD8E31
+P 3150 3950
+F 0 "D2" H 3150 4208 50  0000 C CNN
+F 1 "PGB1" H 3150 4117 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402_NoSilk" H 3150 4050 20  0000 C CNN
+F 3 "~" H 3150 3950 50  0001 C CNN
+	1    3150 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 3950 3350 3950
+Wire Wire Line
+	3350 3950 3350 4150
+Connection ~ 3350 3950
+Wire Wire Line
+	3350 3950 3400 3950
+$Comp
+L Device:D_TVS D6
+U 1 1 5EBDAE1F
+P 3550 3950
+F 0 "D6" H 3550 4208 50  0000 C CNN
+F 1 "PGB1" H 3550 4117 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402_NoSilk" H 3550 4050 20  0000 C CNN
+F 3 "~" H 3550 3950 50  0001 C CNN
+	1    3550 3950
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2600 3600
+Connection ~ 3350 4150
+Wire Wire Line
+	3350 4150 3350 4300
+Wire Wire Line
+	2200 4150 2200 3800
+Wire Wire Line
+	2200 4150 3350 4150
+$Comp
+L power:GND #PWR0128
+U 1 1 5EBE93CC
+P 2300 3800
+F 0 "#PWR0128" H 2300 3550 50  0001 C CNN
+F 1 "GND" H 2305 3627 50  0000 C CNN
+F 2 "" H 2300 3800 50  0001 C CNN
+F 3 "" H 2300 3800 50  0001 C CNN
+	1    2300 3800
+	1    0    0    -1  
+$EndComp
+Text Label 2550 4150 0    50   ~ 0
+SHIELD
+$Comp
+L Device:C C6
+U 1 1 5EB4C148
+P 6100 2250
+F 0 "C6" H 6215 2317 50  0000 L CNN
+F 1 "0.1uF" H 6215 2226 50  0000 L CNN
+F 2 "Resistors_SMD:R_0402_NoSilk" H 6215 2159 20  0000 L CNN
+F 3 "~" H 6100 2250 50  0001 C CNN
+	1    6100 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0132
+U 1 1 5EB4C84D
+P 6100 2400
+F 0 "#PWR0132" H 6100 2150 50  0001 C CNN
+F 1 "GND" H 6105 2227 50  0000 C CNN
+F 2 "" H 6100 2400 50  0001 C CNN
+F 3 "" H 6100 2400 50  0001 C CNN
+	1    6100 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0133
+U 1 1 5EB4CB17
+P 6100 2100
+F 0 "#PWR0133" H 6100 1950 50  0001 C CNN
+F 1 "+5V" H 6115 2273 50  0000 C CNN
+F 2 "" H 6100 2100 50  0001 C CNN
+F 3 "" H 6100 2100 50  0001 C CNN
+	1    6100 2100
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
